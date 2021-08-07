@@ -12,7 +12,7 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 let toggleBtn = null;
 if (typeof SpeechRecognition === "undefined") {
 	startBtn.remove();
-	result.innerHTML = "<b>Browser does not support Speech API. Please download latest chrome.<b>";
+	result.innerHTML = "<b>Lo siento, tu navegador no soporta Speech API. Para usar a Emma, descarga la última versión de Google Chrome.<b>";
 } else {
 	const recognition = new SpeechRecognition();
 	recognition.continuous = true;
