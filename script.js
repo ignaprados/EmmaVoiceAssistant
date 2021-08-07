@@ -62,27 +62,41 @@ function process(rawText) {
 	let response = null;
 	switch(text) {
 		case "hola":
+		case "buenas":
+		case "buenosdias":
+		case "buendía":
+		case "buenasnoches":
 			response = "Hola, cómo estás?"; break;
 		case "cómotellamas":
+		case "cómoestunombre":
+		case "cuálestunombre":
 			response = "Mi nombre es Emma.";  break;
 		case "cómoestás":
 			response = "Estoy muy bien. Gracias por preguntar!"; break;
         case "bien":
-            response = "Me alegro, hoy es un lindo día."; break;
-        case "muybien":
+		case "muybien":
             response = "Me alegro, hoy es un lindo día."; break;
         case "mal":
+		case "muymal":
             response = "No te preocupes, ya pasará, he tenido días peores."; break;
         case "muybienyvos":
+		case "comoteencuentras":
+		case "túcomoestás":
+		case "voscomoestás":
             response = "Ahora que estás aquí conmigo mucho mejor."; break;
         case "quiénestucreador":
             response = "Mi padre es Ignacio Prados, una persona muy divertida, te lo presentaré algún día."; break;
 		case "quéhoraes":
 			response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; break;
 		case "adiós":
+		case "nosvemos":
+		case "chau":
 			response = "Bye!! Vuelve pronto";
 			toggleBtn(); break;
         case "contameunchiste":
+		case "cuentameunchiste":
+		case "chiste":
+		case "unchiste":
             response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En mi país en 30 segundos se robaron al robot, jajaja."; break;
         case "contameunahistoria":
             response = "Había una vez un robot muy pero muy aburrido que se durmió."; break;        
