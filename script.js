@@ -61,6 +61,8 @@ function process(rawText) {
 	text = text.toLowerCase();
 	let response = null;
 	switch(text) {
+		case "":
+			response = "Disculpa, no pude escuchar lo que dijiste, puedes repertirlo por favor?"; break;
 		case "hola":
 		case "buenas":
 		case "buenosdias":
