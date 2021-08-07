@@ -64,6 +64,8 @@ function process(rawText) {
 		case "":
 			response = "Disculpa, no pude escuchar lo que dijiste, puedes repertirlo por favor?"; break;
 		case "hola":
+		case "holaemma":
+		case "holaema":
 		case "buenas":
 		case "buenosdias":
 		case "buendía":
