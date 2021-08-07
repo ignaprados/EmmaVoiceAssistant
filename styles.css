@@ -4,6 +4,7 @@ html {
     font-family: "Poppins", sans-serif;
     margin: auto;
     text-align: center;
+    position: relative;
 }
 
 html::-webkit-scrollbar {

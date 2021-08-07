@@ -72,6 +72,7 @@ function process(rawText) {
 		case "cuálestunombre":
 			response = "Mi nombre es Emma.";  break;
 		case "cómoestás":
+		case "cómoteva":
 			response = "Estoy muy bien. Gracias por preguntar!"; break;
         case "bien":
 		case "muybien":
@@ -94,7 +95,11 @@ function process(rawText) {
 		case "nosvemos":
 		case "chau":
 		case "chao":
-			response = "Bye!! Vuelve pronto";
+		case "adiósemma":
+		case "nosvemosemma":
+		case "chauemma":
+		case "chaoemma":
+			response = "Bye!! Vuelve pronto.";
 			toggleBtn(); break;
         case "contameunchiste":
 		case "cuentameunchiste":
@@ -122,6 +127,11 @@ function process(rawText) {
 		case "quehaces":
 		case "quéhaces":
 			response = "Estoy tratando de entender la mente compleja de los humanos."; break;
+		case "gracias":
+			response = "No hay de que, fui creada para ayudarte y que tengas un buen día."; break;
+		case "cómovatudía":
+		case "cómofuetudía":
+			response = "Excelente, me hablaron muchas personas hoy!"; break;
     }
 	if (!response) {
         window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
