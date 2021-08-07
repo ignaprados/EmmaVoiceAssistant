@@ -5,6 +5,7 @@ html {
     margin: auto;
     text-align: center;
     position: relative;
+    justify-content: center;
 }
 
 html::-webkit-scrollbar {
@@ -126,4 +127,30 @@ footer p a{
 footer p a:hover {
     color: rgb(218, 173, 29);
 }
+
+/*create a media query*/
+@media screen and (max-width: 709px) {
+    .card {
+      overflow-y: scroll;
+      padding: 5%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      text-align: left;
+      margin: auto;
+      margin-top: 3rem;
+      max-width: 600px;
+      min-height: 260px;
+      max-height: 260px;
+      background-color: #62507c;
+      border-radius: 50px;
+      background: #62507c;
+      box-shadow:  20px 20px 60px #534469,
+                  -20px -20px 60px #715c8f;
+
+    }
+    footer p {
+      padding: 1rem;
+      padding-top: 3rem;
+    }
+  }
   

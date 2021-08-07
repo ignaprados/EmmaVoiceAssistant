@@ -73,6 +73,10 @@ function process(rawText) {
 			response = "Mi nombre es Emma.";  break;
 		case "cómoestás":
 		case "cómoteva":
+		case "cómova":
+		case "holacómova":
+		case "holacómoteva":
+		case "holacómoestás":
 			response = "Estoy muy bien. Gracias por preguntar!"; break;
         case "bien":
 		case "muybien":
@@ -105,7 +109,7 @@ function process(rawText) {
 		case "cuentameunchiste":
 		case "chiste":
 		case "unchiste":
-            response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En mi país en 30 segundos se robaron al robot, jajaja."; break;
+            response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En Argentina en 30 segundos se robaron al robot, jajaja."; break;
 		case "contameotro":
 		case "contameotrochiste":
 		case "cuentameotrochiste":
