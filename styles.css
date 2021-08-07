@@ -1,0 +1,128 @@
+html {
+    background-color: #62507c;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    background-color: #62507c;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  ::selection{
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+  }
+
+  .card::-webkit-scrollbar {
+    width: 10px;
+    background-color: #62507c00;
+  }
+  .card::-webkit-scrollbar-thumb {
+    background-color: #ffffff00;
+    border-radius: 10px;
+  }
+  
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.intro {
+    margin-top: 5rem;
+}
+
+.card {
+    overflow-y: scroll;
+    padding: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+    margin: auto;
+    margin-top: 3rem;
+    max-width: 600px;
+    min-height: 260px;
+    max-height: 260px;
+    background-color: #62507c;
+    border-radius: 50px;
+    background: #62507c;
+    box-shadow:  20px 20px 60px #534469,
+                -20px -20px 60px #715c8f;
+}
+
+.card2 {
+    margin-top: 5%;
+    margin-bottom: 5rem;
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    min-height: 30px;
+    background-color: #62507c;
+    border-radius: 50px;
+    background: #62507c;
+    box-shadow:  20px 20px 60px #534469,
+                -20px -20px 60px #715c8f;
+}
+
+/* Main Styles */
+.button {
+    display: block;
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+    color: #fff;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #62507c;
+    box-shadow:  20px 20px 60px #534469,
+                 -20px -20px 60px #715c8f;
+    transition: all 0.3s ease;
+  }
+
+  .active {
+    border-radius: 50%;
+    background: #62507c;
+    box-shadow: inset 20px 20px 60px #534469,
+                inset -20px -20px 60px #715c8f;
+    transition: all 0.3s ease;
+  }
+
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    padding: 3rem;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 550;
+    
+}
+
+footer p a{
+    transition: all 0.3s ease;
+}
+
+footer p a:hover {
+    color: rgb(218, 173, 29);
+}
+  
