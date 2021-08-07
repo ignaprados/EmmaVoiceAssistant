@@ -150,6 +150,8 @@ footer p a:hover {
     }
     footer p {
       padding: 1rem;
+      padding-left: 0px;
+      padding-right: 0px;
       padding-top: 3rem;
     }
   }
