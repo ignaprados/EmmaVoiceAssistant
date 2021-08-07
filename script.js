@@ -87,10 +87,13 @@ function process(rawText) {
         case "quiénestucreador":
             response = "Mi padre es Ignacio Prados, una persona muy divertida, te lo presentaré algún día."; break;
 		case "quéhoraes":
+		case "decimelahora":
+		case "dimelahora":
 			response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; break;
 		case "adiós":
 		case "nosvemos":
 		case "chau":
+		case "chao":
 			response = "Bye!! Vuelve pronto";
 			toggleBtn(); break;
         case "contameunchiste":
@@ -98,8 +101,27 @@ function process(rawText) {
 		case "chiste":
 		case "unchiste":
             response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En mi país en 30 segundos se robaron al robot, jajaja."; break;
+		case "contameotro":
+		case "contameotrochiste":
+		case "cuentameotrochiste":
+		case "cuentameotro":
+		case "otro":
+		case "otrochiste":
+			response = "¿Qué le dice un gusano a otro? Me voy a dar la vuelta a la manzana."; break;
         case "contameunahistoria":
-            response = "Había una vez un robot muy pero muy aburrido que se durmió."; break;        
+            response = "Había una vez un robot muy pero muy aburrido que se durmió."; break;      
+		case "dialgomás":
+		case "dialgo":
+		case "contamealgo":
+		case "cuentamealgo":
+		case "decimealgo":
+		case "dimealgo":
+			response = "No sé que decirte, mi vida es muy aburrida."; break;
+		case "queestáshaciendo":
+		case "quéestáshaciendo":
+		case "quehaces":
+		case "quéhaces":
+			response = "Estoy tratando de entender la mente compleja de los humanos."; break;
     }
 	if (!response) {
         window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
