@@ -155,4 +155,18 @@ footer p a:hover {
       padding-top: 3rem;
     }
   }
+
+  .emma {
+    color: rgb(218, 173, 29);
+    font-weight: 600;
+  }
+
+  .amar {
+    color: rgb(218, 173, 29);
+  }
   
+  .info {
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+  }
