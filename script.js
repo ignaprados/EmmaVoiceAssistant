@@ -256,7 +256,13 @@ function process(rawText) {
 	}
 
 	else if (!response) {
-		response = `Disculpa, no sé a que te refieres con eso. Si querés que lo busque en internet, solo dí "Busca ${rawText}"`; toggleBtn();
+		nose = [
+			`Disculpa, no sé a que te refieres con eso. Si querés que lo busque en internet, solo dí "Busca ${rawText}".`,
+			'Lo siento, no sé que responder a eso.',
+			`No logré entender el significado de "${rawText}".`,
+			`Mi creador no me deja hablar de "${rawText}" contigo, lo siento.`,
+		];
+		response = nose[Math.floor(Math.random() * nose.length)]; toggleBtn();
 	}
 
 	return response;
