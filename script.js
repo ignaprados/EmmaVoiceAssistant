@@ -131,48 +131,88 @@ function process(rawText) {
 	}
 
 	else if (text.includes("historia") || text.includes("cuento")) {
-		response = "Había una vez un robot tan pero tan cansado que se durmió."; toggleBtn();
+		historias = [
+			'Había una vez un robot tan pero tan cansado que se durmió.',
+			'Me encantaría contarte una historia, pero no recuerdo ninguna, mejor pedime que te cuente un chiste.'
+		];
+		response = historias[Math.floor(Math.random() * historias.length)]; toggleBtn();
 	}
 
 	else if (text.includes("hola") || text.includes("buenas") || text.includes("buenos") || text.includes("buendía")) {
-		response = "Hola, cómo estás?"; toggleBtn();
+		respuesta2 = [
+			'Hola. ¿Cómo estás?',
+			'Buenas. ¿Cómo te encuentras?',
+			'Hola, gracias por hablar conmigo.',
+			'Hola, me pone muy feliz que estés aquí.',
+		];
+		response = respuesta2[Math.floor(Math.random() * respuesta2.length)]; toggleBtn();
 	}
 
-	else if (text.includes("estás") || text.includes("estásbien") || text.includes("todobien") || text.includes("cómova") || text.includes("comoteva") || text.includes("sentís") || text.includes("andas") || text.includes("andás") || text.includes("yvos") || text.includes("ytú")) {
+	else if (text.includes("estás") || text.includes("estásbien") || text.includes("todobien") || text.includes("cómova") || text.includes("comoteva") || text.includes("sentís") || text.includes("andas") || text.includes("andás") || text.includes("yvos") || text.includes("cómoestás") || text.includes("ytú")) {
 		respuesta1 = [
 			'Estoy bien, gracias.',
-			"Estoy muy bien. Gracias por preguntar!",
-			"Ahora que estás aquí conmigo me siento mucho mejor.",
+			'Estoy muy bien. Gracias por preguntar!',
+			'Ahora que estás aquí conmigo me siento mucho mejor.',
 		];
 		response = respuesta1[Math.floor(Math.random() * respuesta1.length)]; toggleBtn();
 	}
 
 	else if (text.includes("día") || text.includes("tudía")) {
-		response = "Excelente, me hablaron muchas personas hoy!"; toggleBtn();
+		respuesta3 = [
+			'Excelente, me hablaron muchas personas hoy!',
+			'Muy agotador, tengo mucho trabajo que hacer.',
+			'Espectacular, conocí muchas personas nuevas.',
+		];
+		response = respuesta3[Math.floor(Math.random() * respuesta3.length)]; toggleBtn();
 	}
 
 	else if (text.includes("bien")) {
-		response = "Me alegro, espero que después de hablar conmigo te sientas mucho mejor que ahora."; toggleBtn();
+		respuesta4 = [
+			'Me alegro, espero que después de hablar conmigo te sientas mucho mejor.',
+			'Que bueno! Me alegro por tí.',
+			'Me pone muy feliz que estés bien.',
+		];
+		response = respuesta4[Math.floor(Math.random() * respuesta4.length)]; toggleBtn();
 	}
 
 	else if (text.includes("mal")) {
-		response = "No te preocupes, ya pasará. He tenido días peores."; toggleBtn();
+		respuesta5 = [
+			'No te preocupes, ya pasará. He tenido días peores.',
+			'Que pena, espero que hablar conmigo te haga sentir mejor.',
+			'Yo me ocupo de eso, pedime que te cuente un chiste, te hará sentir mejor.',
+		];
+		response = respuesta5[Math.floor(Math.random() * respuesta5.length)]; toggleBtn();
 	}
 
 	else if (text.includes("hacer") || text.includes("sabes") || text.includes("podés") || text.includes("puedes")) {
-		response = "Muchas cosas. Pero como me gusta hablar, podés pedirme que te cuente algo."; toggleBtn();
+		respuesta6 = [
+			'Muchas cosas. Pero como me gusta hablar, podés pedirme que te cuente algo.',
+			'Puedo decirte la hora, o si quieres te cuento un chiste muy divertido',
+			'Mi creador dice que soy muy buena contando datos innecesarios.',
+		];
+		response = respuesta6[Math.floor(Math.random() * respuesta6.length)]; toggleBtn();
 	}
 
 	else if (text.includes("autodestrucción")) {
 		response = "PELIGRO! Autodestrucción activada en 5, 4, 3, 2, 1, jajajaja es un chiste, eso solo pasa en las películas."; toggleBtn();
 	}
 
-	else if (text.includes("creador") || text.includes("creó")) {
-		response = "Mi creador es Ignacio Prados, una persona muy interesante, algún día te lo presentaré."; toggleBtn();
+	else if (text.includes("creador") || text.includes("creó") || text.includes("creo")) {
+		respuesta7 = [
+			'Mi creador es Ignacio Prados, una persona muy interesante, algún día te lo presentaré.',
+			'Ignacio Prados me creó, con el fin de divertir a las personas.',
+			'Me creó Ignacio Prados, un excelente desarrollador de software, deberías hablar con él algún día.',
+		];
+		response = respuesta7[Math.floor(Math.random() * respuesta7.length)]; toggleBtn();
 	}
 
 	else if (text.includes("gracias") || text.includes("agradecid")) {
-		response = "No hay de que, fui creada para ayudarte y que pases un buen rato."; toggleBtn();
+		agradecimientos = [
+			'No hay de que, fui creada para ayudarte y que pases un buen rato.',
+			'Denada, espero que te haya servido.',
+			'Denada, me gusta pasar tiempo contigo.',
+		];
+		response = agradecimientos[Math.floor(Math.random() * agradecimientos.length)]; toggleBtn();
 	}
 
 	else if (text.includes("haces") || text.includes("haciendo")) {
