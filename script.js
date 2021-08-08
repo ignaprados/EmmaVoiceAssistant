@@ -191,9 +191,13 @@ function process(rawText) {
 		response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; toggleBtn();
 	}
 
+	else if (text.includes("busca")) {
+		window.open(`http://google.com/search?q=${rawText.replace("Busca", "")}`, "_blank");
+		response = `Encontré esta información sobre ${rawText.replace("Busca", "")} en Google.`; toggleBtn();
+	}
+
 	else if (!response) {
-        /*window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");*/
-		response = `Disculpa, no sé a que te refieres con ${rawText}.`; toggleBtn();
+		response = `Disculpa, no sé a que te refieres con eso. Si querés que lo busque en internet, solo dí "Busca ${rawText}"`; toggleBtn();
 	}
 
 	return response;
