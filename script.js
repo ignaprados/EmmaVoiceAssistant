@@ -62,7 +62,8 @@ function process(rawText) {
 	let response = null;
 	switch(text) {
 		case "":
-			response = "Disculpa, no pude escuchar lo que dijiste, puedes repertirlo por favor?"; break;
+			response = "Disculpa, no pude escuchar lo que dijiste, puedes repertirlo por favor?";toggleBtn(); break;
+			
 		case "hola":
 		case "holaemma":
 		case "holaema":
@@ -70,35 +71,35 @@ function process(rawText) {
 		case "buenosdias":
 		case "buendía":
 		case "buenasnoches":
-			response = "Hola, cómo estás?"; break;
+			response = "Hola, cómo estás?"; toggleBtn(); break;
 		case "cómotellamas":
 		case "cómoestunombre":
 		case "cuálestunombre":
-			response = "Mi nombre es Emma.";  break;
+			response = "Mi nombre es Emma."; toggleBtn(); break;
 		case "cómoestás":
 		case "cómoteva":
 		case "cómova":
 		case "holacómova":
 		case "holacómoteva":
 		case "holacómoestás":
-			response = "Estoy muy bien. Gracias por preguntar!"; break;
+			response = "Estoy muy bien. Gracias por preguntar!"; toggleBtn(); break;
         case "bien":
 		case "muybien":
-            response = "Me alegro, hoy es un lindo día."; break;
+            response = "Me alegro, hoy es un lindo día."; toggleBtn(); break;
         case "mal":
 		case "muymal":
-            response = "No te preocupes, ya pasará, he tenido días peores."; break;
+            response = "No te preocupes, ya pasará, he tenido días peores."; toggleBtn(); break;
         case "muybienyvos":
 		case "comoteencuentras":
 		case "túcomoestás":
 		case "voscomoestás":
-            response = "Ahora que estás aquí conmigo mucho mejor."; break;
+            response = "Ahora que estás aquí conmigo mucho mejor."; toggleBtn(); break;
         case "quiénestucreador":
-            response = "Mi padre es Ignacio Prados, una persona muy divertida, te lo presentaré algún día."; break;
+            response = "Mi padre es Ignacio Prados, una persona muy divertida, te lo presentaré algún día."; toggleBtn(); break;
 		case "quéhoraes":
 		case "decimelahora":
 		case "dimelahora":
-			response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; break;
+			response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; toggleBtn(); break;
 		case "adiós":
 		case "nosvemos":
 		case "chau":
@@ -107,43 +108,42 @@ function process(rawText) {
 		case "nosvemosemma":
 		case "chauemma":
 		case "chaoemma":
-			response = "Bye!! Vuelve pronto.";
-			toggleBtn(); break;
+			response = "Bye!! Vuelve pronto."; toggleBtn(); break;
         case "contameunchiste":
 		case "cuentameunchiste":
 		case "chiste":
 		case "unchiste":
-            response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En Argentina en 30 segundos se robaron al robot, jajaja."; break;
+            response = "En China crearon un robot que en 3 minutos atrapó a 20 ladrones. En España en 2 Minutos atrapó a 10 Ladrones. En Argentina en 30 segundos se robaron al robot, jajaja."; toggleBtn(); break;
 		case "contameotro":
 		case "contameotrochiste":
 		case "cuentameotrochiste":
 		case "cuentameotro":
 		case "otro":
 		case "otrochiste":
-			response = "¿Qué le dice un gusano a otro? Me voy a dar la vuelta a la manzana."; break;
+			response = "¿Qué le dice un gusano a otro? Me voy a dar la vuelta a la manzana."; toggleBtn(); break;
         case "contameunahistoria":
-            response = "Había una vez un robot muy pero muy aburrido que se durmió."; break;      
+            response = "Había una vez un robot muy pero muy aburrido que se durmió."; toggleBtn(); break;   
 		case "dialgomás":
 		case "dialgo":
 		case "contamealgo":
 		case "cuentamealgo":
 		case "decimealgo":
 		case "dimealgo":
-			response = "No sé que decirte, mi vida es muy aburrida."; break;
+			response = "No sé que decirte, mi vida es muy aburrida."; toggleBtn(); break;
 		case "queestáshaciendo":
 		case "quéestáshaciendo":
 		case "quehaces":
 		case "quéhaces":
-			response = "Estoy tratando de entender la mente compleja de los humanos."; break;
+			response = "Estoy tratando de entender la mente compleja de los humanos."; toggleBtn(); break;
 		case "gracias":
-			response = "No hay de que, fui creada para ayudarte y que tengas un buen día."; break;
+			response = "No hay de que, fui creada para ayudarte y que tengas un buen día."; toggleBtn(); break;
 		case "cómovatudía":
 		case "cómofuetudía":
-			response = "Excelente, me hablaron muchas personas hoy!"; break;
+			response = "Excelente, me hablaron muchas personas hoy!"; toggleBtn(); break;
     }
 	if (!response) {
-        window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
-		return `Mi creador no me deja contestarte, pero encontré esta información en internet sobre ${rawText} que te puede ser útil.`;
+        /*window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");*/
+		return `Disculpa, no sé a que te refieres con ${rawText}.`;
 	}
 	return response;
 }
