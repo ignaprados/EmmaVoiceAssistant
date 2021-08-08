@@ -179,7 +179,7 @@ function process(rawText) {
 		response = "Estoy tratando de entender la mente compleja de los humanos."; toggleBtn();
 	}
 
-	else if (text.includes("cha") || text.includes("adiós") || text.includes("vemos")) {
+	else if (text.includes("cha") || text.includes("adiós") || text.includes("vemos") || text.includes("mevoy")) {
 		response = "Bye!! Vuelve pronto."; toggleBtn();
 	}
 
