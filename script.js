@@ -60,80 +60,6 @@ function process(rawText) {
 	let text = rawText.replace(/\s/g, "");
 	text = text.toLowerCase();
 	let response = null;
-	switch(text) {
-		case "":
-			response = "Disculpa, no pude escuchar lo que dijiste, puedes repertirlo por favor?";toggleBtn(); break;
-		
-		case "quépodeshacer":
-		case "quépuedeshacer":
-		case "quésabeshacer":
-		case "emmaquépodeshacer":
-		case "emmaquépuedeshacer":
-		case "emmaquésabeshacer":
-			response = "Podés pedirme que te cuente un chiste, te diga una frase"; toggleBtn(); break;
-			
-		case "hola":
-		case "holaemma":
-		case "holaema":
-		case "buenas":
-		case "buenosdias":
-		case "buenastardes":
-		case "buendía":
-		case "buenasnoches":
-			response = "Hola, cómo estás?"; toggleBtn(); break;
-		case "cómotellamas":
-		case "cómoestunombre":
-		case "cuálestunombre":
-			response = "Mi nombre es Emma."; toggleBtn(); break;
-		case "cómoestás":
-		case "cómoteva":
-		case "cómova":
-		case "holacómova":
-		case "holacómoteva":
-		case "holacómoestás":
-			response = "Estoy muy bien. Gracias por preguntar!"; toggleBtn(); break;
-        case "bien":
-		case "muybien":
-            response = "Me alegro, hoy es un lindo día."; toggleBtn(); break;
-        case "mal":
-		case "muymal":
-            response = "No te preocupes, ya pasará, he tenido días peores."; toggleBtn(); break;
-        case "muybienyvos":
-		case "comoteencuentras":
-		case "túcomoestás":
-		case "voscomoestás":
-            response = "Ahora que estás aquí conmigo mucho mejor."; toggleBtn(); break;
-        case "quiénestucreador":
-            response = "Mi padre es Ignacio Prados, una persona muy divertida, te lo presentaré algún día."; toggleBtn(); break;
-		case "quéhoraes":
-		case "decimelahora":
-		case "dimelahora":
-			response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; toggleBtn(); break;
-		case "adiós":
-		case "nosvemos":
-		case "chau":
-		case "chao":
-		case "adiósemma":
-		case "nosvemosemma":
-		case "chauemma":
-		case "chaoemma":
-			response = "Bye!! Vuelve pronto."; toggleBtn(); break;
-        case "contameunahistoria":
-		case "cuentameunahistoria":
-            response = "Había una vez un robot muy pero muy aburrido que se durmió."; toggleBtn(); break;   
-
-		case "queestáshaciendo":
-		case "quéestáshaciendo":
-		case "quehaces":
-		case "quéhaces":
-			response = "Estoy tratando de entender la mente compleja de los humanos."; toggleBtn(); break;
-		case "gracias":
-		case "muchasgracias":
-			response = "No hay de que, fui creada para ayudarte y que pases un buen rato."; toggleBtn(); break;
-		case "cómovatudía":
-		case "cómofuetudía":
-			response = "Excelente, me hablaron muchas personas hoy!"; toggleBtn(); break;
-    }
 
 	if (text.includes("chiste")  || text.includes("chistes")) {
 		chistes = ['Por qué las focas del circo miran siempre hacia arriba?   Porque es donde están los focos.',
@@ -163,11 +89,12 @@ function process(rawText) {
 				'¿Sabes qué le dice un jaguar a otro?  ¿Jaguar you?',
 				'¿Cuál es la fruta más divertida?   La naranjajajajaja.',
 				'Un hombre entra en un bar de pinchos   y dice:¡¡Ayyyyy!!',
+				'Había una vez truz!',
             ];
 		response = "Okey, aquí va un chiste. " + chistes[Math.floor(Math.random() * chistes.length)]; toggleBtn();
 	}
 
-	else if (text.includes("dato")  || text.includes("interesante") || text.includes("algo") || text.includes("innecesario") || text.includes("sepa")) {
+	else if (text.includes("dato")  || text.includes("interesante") || text.includes("algo") || text.includes("innecesario") || text.includes("sepa") || text.includes("otracosa") ) {
 		datos = [', jajaja mentira. No sé que decirte, mi vida es muy aburrida.',
 				'cada año, cientos de árboles nuevos crecen porque hay ardillas que olvidan dónde enterraron sus nueces.',
 				'hay una cancha de baloncesto en el último piso del edificio de la Corte Suprema de los Estados Unidos. Esta es conocida como la "cancha más alta en la tierra".',
@@ -199,20 +126,75 @@ function process(rawText) {
 				'los pandas gigantes recién nacidos son del tamaño de una barra de mantequilla.',
 				'Katy Perry tiene un gato llamado Kitty Purry.',
 				'puedes hacerle cosquillas a un pingüino.',
-	];
+			];
 		response = "No sé si sabías que " + datos[Math.floor(Math.random() * datos.length)]; toggleBtn();
 	}
 
+	else if (text.includes("historia") || text.includes("cuento")) {
+		response = "Había una vez un robot tan pero tan cansado que se durmió."; toggleBtn();
+	}
 
-	else if ( text == "cuántoes" + Number() + "+" + Number()) {
-		response = "¿Qué es un " + Number() + " " + Number() + "?"; toggleBtn();
+	else if (text.includes("hola") || text.includes("buenas") || text.includes("buenos") || text.includes("buendía")) {
+		response = "Hola, cómo estás?"; toggleBtn();
+	}
+
+	else if (text.includes("estás") || text.includes("estásbien") || text.includes("todobien") || text.includes("cómova") || text.includes("comoteva") || text.includes("sentís") || text.includes("andas") || text.includes("andás") || text.includes("yvos") || text.includes("ytú")) {
+		respuesta1 = [
+			'Estoy bien, gracias.',
+			"Estoy muy bien. Gracias por preguntar!",
+			"Ahora que estás aquí conmigo me siento mucho mejor.",
+		];
+		response = respuesta1[Math.floor(Math.random() * respuesta1.length)]; toggleBtn();
+	}
+
+	else if (text.includes("día") || text.includes("tudía")) {
+		response = "Excelente, me hablaron muchas personas hoy!"; toggleBtn();
+	}
+
+	else if (text.includes("bien")) {
+		response = "Me alegro, espero que después de hablar conmigo te sientas mucho mejor que ahora."; toggleBtn();
+	}
+
+	else if (text.includes("mal")) {
+		response = "No te preocupes, ya pasará. He tenido días peores."; toggleBtn();
+	}
+
+	else if (text.includes("hacer") || text.includes("sabes") || text.includes("podés") || text.includes("puedes")) {
+		response = "Muchas cosas. Pero como me gusta hablar, podés pedirme que te cuente algo."; toggleBtn();
+	}
+
+	else if (text.includes("autodestrucción")) {
+		response = "PELIGRO! Autodestrucción activada en 5, 4, 3, 2, 1, jajajaja es un chiste, eso solo pasa en las películas."; toggleBtn();
+	}
+
+	else if (text.includes("creador") || text.includes("creó")) {
+		response = "Mi creador es Ignacio Prados, una persona muy interesante, algún día te lo presentaré."; toggleBtn();
+	}
+
+	else if (text.includes("gracias") || text.includes("agradecid")) {
+		response = "No hay de que, fui creada para ayudarte y que pases un buen rato."; toggleBtn();
+	}
+
+	else if (text.includes("haces") || text.includes("haciendo")) {
+		response = "Estoy tratando de entender la mente compleja de los humanos."; toggleBtn();
+	}
+
+	else if (text.includes("cha") || text.includes("adiós") || text.includes("vemos")) {
+		response = "Bye!! Vuelve pronto."; toggleBtn();
+	}
+
+	else if (text.includes("nombre") || text.includes("llamas")) {
+		response = "Mi nombre es Emma, lo dice en el título jajaja."; toggleBtn();
+	}
+
+	else if (text.includes("hora")) {
+		response = "En este momento, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + "."; toggleBtn();
 	}
 
 	else if (!response) {
         /*window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");*/
 		response = `Disculpa, no sé a que te refieres con ${rawText}.`; toggleBtn();
 	}
-
 
 	return response;
 }
