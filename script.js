@@ -148,6 +148,17 @@ function process(rawText) {
 		response = respuesta2[Math.floor(Math.random() * respuesta2.length)]; toggleBtn();
 	}
 
+	else if (text.includes("haces") || text.includes("haciendo") || text.includes("estáshaciendo")) {
+		respuesta8 = [
+			'Estoy tratando de entender la mente compleja de los humanos.',
+			'Estoy aprendiendo a tocar la Guitarra.',
+			'Estoy mirando YouTube, estar mucho tiempo sola es aburrido.',
+			'Estoy buscando recetas de cocina en internet, tengo mucho hambre.',
+			'Estoy terminando mi tarea de matemática, me encanta estudiar.',
+		];
+		response = respuesta8[Math.floor(Math.random() * respuesta8.length)]; toggleBtn();
+	}
+
 	else if (text.includes("estás") || text.includes("estásbien") || text.includes("todobien") || text.includes("cómova") || text.includes("comoteva") || text.includes("sentís") || text.includes("andas") || text.includes("andás") || text.includes("yvos") || text.includes("cómoestás") || text.includes("ytú")) {
 		respuesta1 = [
 			'Estoy bien, gracias.',
@@ -215,16 +226,24 @@ function process(rawText) {
 		response = agradecimientos[Math.floor(Math.random() * agradecimientos.length)]; toggleBtn();
 	}
 
-	else if (text.includes("haces") || text.includes("haciendo")) {
-		response = "Estoy tratando de entender la mente compleja de los humanos."; toggleBtn();
-	}
-
-	else if (text.includes("cha") || text.includes("adiós") || text.includes("vemos") || text.includes("mevoy")) {
-		response = "Bye!! Vuelve pronto."; toggleBtn();
+	else if (text.includes("cha") || text.includes("adiós") || text.includes("vemos") || text.includes("mevoy") || text.includes("hastaluego")) {
+		despedida = [
+			'Bye!! Vuelve pronto.',
+			'Nos vemos, que tengas un lindo día.',
+			'Hasta luego, por favor no me dejes sola por mucho tiempo.',
+			'Adiós, pasé un buen rato contigo.',
+		];
+		response = despedida[Math.floor(Math.random() * despedida.length)]; toggleBtn();
 	}
 
 	else if (text.includes("nombre") || text.includes("llamas")) {
-		response = "Mi nombre es Emma, lo dice en el título jajaja."; toggleBtn();
+		nombre = [
+			'Mi nombre es Emma, lo dice en el título jajaja.',
+			'Me llamo Emma.',
+			'Mi nombre es Emma, creo que no hace falta que lo diga.',
+			'Mis amigos me dicen Emma.',
+		];
+		response = nombre[Math.floor(Math.random() * nombre.length)]; toggleBtn();
 	}
 
 	else if (text.includes("hora")) {
