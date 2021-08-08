@@ -236,12 +236,12 @@ function process(rawText) {
 		response = despedida[Math.floor(Math.random() * despedida.length)]; toggleBtn();
 	}
 
-	else if (text.includes("nombre") || text.includes("llamas")) {
+	else if (text.includes("nombre") || text.includes("llamas") || text.includes("llaman")) {
 		nombre = [
 			'Mi nombre es Emma, lo dice en el título jajaja.',
 			'Me llamo Emma.',
 			'Mi nombre es Emma, creo que no hace falta que lo diga.',
-			'Mis amigos me dicen Emma.',
+			'Mis amigos me dicen Emma, pero tú puedes llamarme cuando quieras.',
 		];
 		response = nombre[Math.floor(Math.random() * nombre.length)]; toggleBtn();
 	}
