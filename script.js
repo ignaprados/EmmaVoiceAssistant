@@ -251,8 +251,9 @@ function process(rawText) {
 	}
 
 	else if (text.includes("busca")) {
-		window.open(`http://google.com/search?q=${rawText.replace("Busca", "")}`, "_blank");
-		response = `Encontré esta información sobre ${rawText.replace("Busca", "")} en Google.`; toggleBtn();
+
+		window.open(`http://google.com/search?q=${rawText.replace("Busca"&&"Buscar", "")}`, "_blank");
+		response = `Encontré esta información sobre ${rawText.replace("Busca"&&"Buscar", "")}.`; toggleBtn();
 	}
 
 	else if (!response) {
